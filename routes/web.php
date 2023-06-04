@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('tugas');
-});
+});*/
 
 Route::get('/profile', function () {
     return view('profile');
@@ -70,5 +70,11 @@ Route::prefix('toko')->group(function(){
 
     Route::get('/about',
     [TokoController::class, 'about']);
+
+    Route::get('/admin',
+    [TokoController::class, 'admin']);
+
+    Route::get('/customer', 
+    [TokoController::class, 'customer']);
 
 });
